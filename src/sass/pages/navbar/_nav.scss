@@ -1,7 +1,7 @@
 @import '../../abstracts/mixins';
 @import '../../abstracts/variables';
 .nav {
-  padding: 0 60px;
+  padding: 0 150px;
   @include flexbox(row, center, space-between);
   position: fixed;
   width: 100%;
@@ -14,7 +14,7 @@
   z-index: 2;
   transform: translateY(-10vh);
   opacity: 0;
-  animation: test 0.3s ease forwards;
+  animation: navbar 0.3s ease forwards;
 
   ul {
     @include flexbox(row, center, space-between);
@@ -26,46 +26,14 @@
   }
 
   @include sm {
+    padding: 0 25px;
     bottom: 0;
     margin-bottom: 0;
     transform: translateY(10vh);
   }
-}
 
-@keyframes test {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  &_logo svg {
+    width: 150px;
+    height: 35px;
   }
 }
-
-// .nav {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   height: 100vh;
-//   @include flexbox(flex, column, center, flex-start);
-//   width: 5vw;
-//   border-left: 1px solid $slate-light;
-//   color: $green;
-//   background-color: $navy;
-//   padding: 60px 0;
-//   z-index: 2;
-//   box-shadow: 10px 0 5px -2px #888;
-
-//   ul {
-//     list-style: none;
-
-//     li {
-//       writing-mode: vertical-rl;
-//       text-orientation: sideways-right;
-//       padding: 15px;
-//     }
-//   }
-
-//   &_logo {
-//     height: 150px;
-//     writing-mode: vertical-rl;
-//     text-orientation: sideways-right;
-//   }
-// }

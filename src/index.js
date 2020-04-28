@@ -9,10 +9,7 @@ import App from './App';
 import rootReducer from './store/reducers'; // redux check reducer folder
 import './sass/_default.scss';
 
-const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>

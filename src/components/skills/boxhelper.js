@@ -5,7 +5,7 @@ export const content = [
   },
   {
     title: 'Back-End Technologies',
-    lang: ['Php', 'Node.js', 'Firebase'],
+    lang: ['PHP', 'Node.js', 'Firebase'],
   },
   {
     title: 'Databases',
