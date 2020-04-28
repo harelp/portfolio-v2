@@ -1,0 +1,22 @@
+.title {
+  padding: 150px 0 50px 0;
+  border-bottom: 1px solid #172947;
+
+  h4 {
+    font-weight: 100;
+    color: $green;
+    font-size: 14px;
+    font-family: $roboto-mono;
+  }
+
+  @include sm {
+    padding: 25px 0 25px 0;
+
+    h2 {
+      font-size: 20px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+  }
+}

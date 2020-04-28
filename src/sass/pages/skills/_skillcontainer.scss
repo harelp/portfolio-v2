@@ -1,0 +1,22 @@
+.skill_container {
+  grid-area: container;
+  @include flexbox(row, center, flex-start);
+  flex-wrap: wrap;
+
+  div {
+    margin: 5px 25px 5px 0;
+    color: $slate;
+  }
+
+  @include sm {
+    @include flexbox(row, center, center);
+    border-top: 1px solid $navy-dark;
+    margin-top: 15px;
+    padding-top: 10px;
+
+    div {
+      margin: 5px 15px 5px 0;
+      color: $slate;
+    }
+  }
+}

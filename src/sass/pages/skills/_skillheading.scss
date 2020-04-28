@@ -1,0 +1,4 @@
+.skill_heading {
+  grid-area: heading;
+  @include flexbox(row, center, flex-start);
+}

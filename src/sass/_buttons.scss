@@ -1,0 +1,109 @@
+.btn {
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    background-color: rgba(100, 255, 218, 0.02);
+    transition: all 0.3s;
+  }
+  &_action {
+    display: block;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    background-color: rgba(100, 255, 218, 0.1);
+    color: $green;
+    margin-top: 30px;
+    padding: 15px 30px;
+    border-radius: 2px;
+    font-size: 16px;
+  }
+
+  &_view {
+    display: block;
+    border: 1px solid $green;
+    background-color: transparent;
+    color: $green;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-size: 16px;
+
+    svg {
+      display: none;
+    }
+
+    @include sm {
+      border: none;
+      color: $white;
+      padding: 0;
+      svg {
+        display: inline;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &_resume {
+    display: block;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    background-color: rgba(100, 255, 218, 0.1);
+    color: $green;
+    margin-top: 30px;
+    padding: 15px 30px;
+    padding-right: 60px;
+    border-radius: 2px;
+    font-size: 16px;
+    text-align: right;
+  }
+}
+
+.btn_submit {
+  cursor: pointer;
+  padding: 17px 50px;
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1;
+  color: $white;
+  background: linear-gradient(
+    -45deg,
+    #ffa63d,
+    #ff3d77,
+    #1593e3,
+    #5918df,
+    #ffa63d
+  );
+  border-radius: 30px;
+  background-size: 1000%;
+  border: none;
+  transition: all 1s;
+
+  &:hover {
+    transform: scale(1.1);
+    animation: glowUp 60s linear infinite;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(
+      -45deg,
+      #ffa63d,
+      #ff3d77,
+      #1593e3,
+      #5918df,
+      #ffa63d
+    );
+    border-radius: 40px;
+    background-size: 1000%;
+    filter: blur(10px);
+  }
+}
+
+.btn_submit:hover:before {
+  filter: blur(20px);
+  animation: glowUp 60s linear infinite;
+}

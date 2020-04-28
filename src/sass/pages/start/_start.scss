@@ -1,0 +1,7 @@
+@import '../../abstracts/mixins';
+@import '../../abstracts/variables';
+.start_container {
+  @include flexbox(column, flex-start, center);
+  max-width: 700px;
+  min-height: 100vh;
+}

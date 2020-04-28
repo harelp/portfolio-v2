@@ -1,0 +1,50 @@
+.project {
+  &_mask {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+
+    .img {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
+  &_cover {
+    :nth-child(1),
+    :nth-child(2) {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      background-color: $navy;
+    }
+    :nth-child(1) {
+      left: 0;
+    }
+    :nth-child(2) {
+      right: 0;
+    }
+  }
+}
+
+.project {
+  @include sm {
+    &_mask {
+      height: 100vh;
+
+      .img {
+        width: 100vw;
+        height: 100vh;
+        //background-color: $navy-light !important;
+      }
+    }
+    &_cover {
+      display: none;
+    }
+  }
+}

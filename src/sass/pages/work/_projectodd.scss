@@ -1,0 +1,104 @@
+.work_project:nth-child(odd) {
+  .project {
+    &_content {
+      @include flexbox(row-reverse, null, space-between);
+
+      @include sm {
+        //border: 1px solid red;
+        height: 80vh;
+        @include flexbox(column, flex-start, space-around);
+      }
+    }
+
+    &_mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: -1;
+
+      .img {
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+
+    @include sm {
+      &_mask {
+        height: 100vh;
+
+        .img {
+          width: 100vw;
+          height: 100vh;
+        }
+      }
+      &_cover {
+        display: none;
+      }
+    }
+
+    &_cover {
+      :nth-child(1),
+      :nth-child(2) {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background-color: $navy;
+      }
+      :nth-child(1) {
+        left: 0;
+      }
+      :nth-child(2) {
+        right: 0;
+      }
+    }
+  }
+
+  .box {
+    &_left {
+      @include flexbox(column, flex-end, flex-start);
+      @include sm {
+        @include flexbox(column, flex-start, flex-start);
+      }
+    }
+    &_right {
+      @include flexbox(column, flex-start, space-between);
+      text-align: left;
+      @include sm {
+        height: 30vh;
+        align-items: flex-start;
+        text-align: left;
+        p {
+          max-width: 400px;
+          color: $slate-light;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+.work_project:nth-child(odd):hover {
+  .project {
+    &_cover {
+      :nth-child(2) {
+        height: 0;
+        transition: ease-in 0.5s;
+      }
+      :nth-child(1) {
+        background-color: $navy-light;
+        transition: ease-in 0.5s 0.5s;
+      }
+    }
+    &_mask {
+      transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+      animation: zoom-in 1s linear;
+      @include sm {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        animation: none;
+      }
+    }
+  }
+}

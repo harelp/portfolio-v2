@@ -1,0 +1,49 @@
+.box {
+  &_left {
+    @include flexbox(column, flex-start, flex-start);
+    li {
+      color: $slate;
+      @include sm {
+        color: $slate-light;
+      }
+    }
+  }
+  &_right {
+    @include flexbox(column, flex-end, space-between);
+    text-align: right;
+
+    p {
+      max-width: 400px;
+      color: $slate;
+    }
+
+    @include sm {
+      height: 30vh;
+      align-items: flex-start;
+      text-align: left;
+      p {
+        max-width: 400px;
+        color: $slate-light;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.box_buttons {
+  @include flexbox(row, flex-end, space-between);
+
+  :nth-child(1) {
+    margin-right: 10px;
+  }
+
+  .btn_action {
+    display: block;
+    border: 1px solid $green;
+    color: $green;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-size: 16px;
+  }
+}

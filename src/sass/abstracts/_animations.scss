@@ -1,0 +1,38 @@
+@keyframes glowUp {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 1000%;
+  }
+}
+
+@keyframes line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes slider-line {
+  to {
+    top: 12vh;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+  to {
+    transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+  }
+  to {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}

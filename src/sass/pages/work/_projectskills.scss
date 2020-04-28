@@ -1,0 +1,8 @@
+.project {
+  &_skills {
+    @include flexbox(row, center, space-between);
+    li {
+      margin-right: 10px;
+    }
+  }
+}

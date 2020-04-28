@@ -1,0 +1,27 @@
+@import '../../abstracts/_mixins';
+@import '../../abstracts/_variables';
+@import '../../abstracts/_animations';
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: $navy;
+  @include flexbox(row, center, center);
+}
+
+#loader {
+  width: 90px;
+  height: 113px;
+
+  &_logo path:first-child {
+    stroke-dasharray: 565px;
+    stroke-dashoffset: 565px;
+    -moz-animation: line 2.5s linear forwards;
+    -webkit-animation: line 2.5s linear forwards;
+    animation: line 2.5s linear forwards;
+  }
+}

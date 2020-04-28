@@ -1,0 +1,70 @@
+.sideNav {
+  position: fixed;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 60px;
+  margin-top: 80px;
+  right: 0;
+  z-index: 4;
+  font-size: 18px;
+  &_container {
+    background-color: $navy-light;
+
+    width: 100%;
+    padding: 20px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.25),
+      0 30px 60px -30px rgba(0, 0, 0, 0.3),
+      0 -18px 60px -10px rgba(0, 0, 0, 0.025);
+
+    .sideNav_links {
+      @include flexbox(row, flex-start, space-between);
+      flex-wrap: wrap;
+
+      div {
+        cursor: pointer;
+        padding: 10px 0;
+        margin-right: 25px;
+        display: inline;
+        transition: all 0.3s ease-in-out;
+        box-sizing: border-box;
+        text-decoration: none;
+        // box-shadow: inset 0 -55px 0 inherit;
+
+        &:hover {
+          box-shadow: inset 0 -2px 0 0 $green;
+        }
+      }
+    }
+  }
+
+  &_resume {
+    cursor: pointer;
+    background-color: $navy-dark;
+    border-radius: 0 0 4px 4px;
+    width: 100%;
+    padding: 20px;
+
+    a {
+      color: $slate-light;
+    }
+    svg {
+      margin-left: 15px;
+      path {
+        fill: $slate-light;
+      }
+    }
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      background-color: $navy;
+    }
+  }
+}
+
+.sideNav {
+  @include sm {
+    position: fixed;
+    bottom: 80px;
+  }
+}

@@ -1,0 +1,55 @@
+.work {
+  &_project {
+    position: relative;
+    overflow: hidden;
+    padding: 150px 0;
+
+    h1 {
+      font-size: 48px;
+      @include sm {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.work_project:hover {
+  li {
+    color: $slate-light;
+    transition: ease-in 0.5s 0.5s;
+  }
+  .project {
+    &_cover {
+      :nth-child(1) {
+        height: 0;
+        transition: ease-in 0.5s;
+      }
+      :nth-child(2) {
+        background-color: $navy-light;
+        transition: ease-in 0.5s 0.5s;
+      }
+    }
+    &_mask {
+      transform: matrix(1.5, 0, 0, 1.5, 0, 0);
+      animation: zoom-in 1s linear;
+    }
+  }
+}
+
+// mobile
+
+.work {
+  &_project {
+    @include sm {
+      height: 100vh;
+      padding: 25px 0 25px 0;
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+}

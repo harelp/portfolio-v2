@@ -1,0 +1,20 @@
+.project {
+  &_content {
+    @include flexbox(row, null, space-between);
+
+    h2 {
+      color: $slate-light;
+    }
+  }
+}
+
+// mobile
+.project {
+  &_content {
+    @include sm {
+      //border: 1px solid red;
+      height: 80vh;
+      @include flexbox(column, flex-start, space-around);
+    }
+  }
+}

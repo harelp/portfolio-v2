@@ -1,0 +1,51 @@
+/*  
+    Name: Harel Peri
+    Portofolio v2
+    
+*/
+
+// Imports   //
+// ---------//
+
+@import './abstracts/animations';
+@import './abstracts/mixins';
+@import './abstracts/typography';
+@import './abstracts/variables';
+
+// Mobile    //
+// ---------//
+@import './pages/mobile/breakpoints';
+
+// Pages     //
+// ---------//
+@import './pages/global';
+@import './buttons';
+@import './pagetitle';
+// loader
+@import './pages/loader/loader';
+// nav
+@import './pages/navbar/nav';
+@import './pages/navbar/toggle';
+@import './pages/navbar/sidenav';
+// main
+@import './pages/start/start';
+// projects
+@import './pages/work/workproject';
+@import './pages/work/projectmask';
+@import './pages/work/projectcontent';
+@import './pages/work/boxes';
+@import './pages/work/projectskills';
+@import './pages/work/expand';
+@import './pages/work/projectodd';
+// experiments
+@import './pages/small/smallcontainer';
+@import './pages/small/smallbox';
+
+// skills
+@import './pages/skills/skillbox';
+@import './pages/skills/skillicon';
+@import './pages/skills/skillheading';
+@import './pages/skills/skillcontainer';
+
+// contact
+@import './pages/contact/contact';

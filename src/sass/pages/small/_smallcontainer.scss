@@ -1,0 +1,13 @@
+.small_container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 150px;
+
+  @include flexbox(row, center, space-between);
+  flex-wrap: wrap;
+
+  @include sm {
+    @include flexbox(column, center, space-between);
+    padding-top: 50px;
+  }
+}
