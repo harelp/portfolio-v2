@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './sass/main.scss';
 
 import Loader from './components/Loader.js';
@@ -55,17 +56,33 @@ function App() {
       scrollTo={[start, work, experiments, skills, contract]}
     ></SideNav>
   );
-  return (
+
+  const mainPage = (
     <div>
-      {!isLoaded && loader}
-      {!isScrolling && nav}
-      {!isScrolling && sideNav}
       <Layout scrollToref={scrollToref} scrollTo={{ work, start }}></Layout>
       <WorkLayout scrollTo={work}></WorkLayout>
       <SmallLayout scrollTo={experiments}></SmallLayout>
       <SkillsLayout scrollTo={skills}></SkillsLayout>
       <ContactLayout scrollTo={{ contract, start }}></ContactLayout>
     </div>
+  );
+  return (
+    <Router>
+      {!isLoaded && loader}
+      {!isScrolling && nav}
+      {!isScrolling && sideNav}
+
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => {
+            return mainPage;
+          }}
+        />
+        <Route exact path="/test" component={WorkLayout} />
+      </Switch>
+    </Router>
   );
 }
 
