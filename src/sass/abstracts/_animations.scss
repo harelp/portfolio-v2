@@ -52,18 +52,9 @@
 
 @keyframes col {
   from {
-    fill: transparent;
+    opacity: 0;
   }
   to {
-    fill: #64ffda;
-  }
-}
-
-@keyframes colTwo {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: #ccd6f6;
+    opacity: 1;
   }
 }
