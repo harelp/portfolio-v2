@@ -46,25 +46,27 @@ function App() {
     ></SideNav>
   );
 
-  const mainPage = (
-    <div>
-      {!isScrolling && nav}
-      {!isScrolling && sideNav}
-      <Layout scrollToref={scrollToref} scrollTo={{ work, start }}></Layout>
-      <WorkLayout scrollTo={work}></WorkLayout>
-      <SmallLayout scrollTo={experiments}></SmallLayout>
-      <SkillsLayout scrollTo={skills}></SkillsLayout>
-      <ContactLayout scrollTo={{ contract, start }}></ContactLayout>
-    </div>
-  );
   return (
     <Router>
       <Switch>
         <Route
           exact
           path="/"
-          render={() => {
-            return mainPage;
+          render={(routerProps) => {
+            return (
+              <div>
+                {!isScrolling && nav}
+                {!isScrolling && sideNav}
+                <Layout
+                  scrollToref={scrollToref}
+                  scrollTo={{ work, start }}
+                ></Layout>
+                <WorkLayout link={routerProps} scrollTo={work}></WorkLayout>
+                <SmallLayout scrollTo={experiments}></SmallLayout>
+                <SkillsLayout scrollTo={skills}></SkillsLayout>
+                <ContactLayout scrollTo={{ contract, start }}></ContactLayout>
+              </div>
+            );
           }}
         />
         <Route

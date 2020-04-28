@@ -44,6 +44,7 @@ export const image = [];
 export const projects = [
   {
     name: 'Quizi',
+    linkTo: 'quizi',
     skills: ['React.js,', 'Node.js,', 'Express,', 'mongoDb'],
     description:
       'A quiz game app which lets you compete with others, create your own quizzes and share it with others.',
@@ -54,6 +55,7 @@ export const projects = [
   },
   {
     name: 'Hosty',
+    linkTo: 'hosty',
     skills: ['CSS,', 'CSS Grid,', 'JavaScript'],
     description:
       'A small and modern one page web design created for a small hosting company.',
@@ -64,6 +66,7 @@ export const projects = [
   },
   {
     name: 'Yael Sayag',
+    linkTo: 'yaelsayag',
     skills: ['CSS,', 'JavaScript,', 'Bootstrap'],
     description:
       'Portfolio for a soap opera actor designed with bootstrap and canvas theme library.',
@@ -74,6 +77,7 @@ export const projects = [
   },
   {
     name: 'HostInfuse',
+    linkTo: 'hostInfuse',
     skills: ['CSS,', 'JavaScript,', 'Bootstrap'],
     description:
       'Portfolio for a soap opera actor designed with bootstrap and canvas theme library.',
@@ -84,6 +88,7 @@ export const projects = [
   },
   {
     name: 'QuickBoosters',
+    linkTo: 'quickboosters',
     skills: ['CSS,', 'JavaScript,', 'Bootstrap'],
     description:
       'Portfolio for a soap opera actor designed with bootstrap and canvas theme library.',

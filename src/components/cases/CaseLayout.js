@@ -8,7 +8,7 @@ const CaseLayout = (props) => {
     return <img src={img} alt={props.name} key={i}></img>;
   });
   return (
-    <div>
+    <div className="casses_container">
       <div className="casses_nav wrapper">
         <Link to="/" className="btn btn_action">
           <svg
@@ -26,7 +26,7 @@ const CaseLayout = (props) => {
             />
           </svg>
         </Link>
-        <a href="/#" className="btn_submit">
+        <a href={findObj[0].website} className="btn_submit">
           Visit
         </a>
       </div>

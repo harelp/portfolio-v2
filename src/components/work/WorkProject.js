@@ -16,6 +16,9 @@ const WorkHeader = (props) => {
     setTimeout(() => {
       scrollToref(focusTo);
     }, 1000);
+    setTimeout(() => {
+      props.link.history.push(`/cases/${props.linkTo}`);
+    }, 2000);
     setSize(true);
   };
   return (

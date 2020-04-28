@@ -46,7 +46,7 @@ export const casesArr = [
   },
   {
     name: 'yaelsayag',
-    website: 'www.yaelsayag.com',
+    website: 'http://yaelsayag.com',
     images: [yael1, yael2, yael3, yael4, yael5, yael6, yael7],
   },
   {
