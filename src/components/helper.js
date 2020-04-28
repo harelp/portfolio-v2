@@ -3,7 +3,7 @@ export const scrollToref = (ref) => window.scrollTo(0, ref.current.offsetTop);
 export const smallProjs = [
   {
     name: 'Portfolio v1',
-    website: 'hello',
+    website: 'https://harelp.xyz/',
   },
   {
     name: 'Todo App',

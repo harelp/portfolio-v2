@@ -14,19 +14,17 @@
 }
 
 .work_project:hover {
-  li {
+  li,
+  p {
     color: $slate-light;
     transition: ease-in 0.5s 0.5s;
   }
   .project {
     &_cover {
-      :nth-child(1) {
+      :nth-child(1),
+      :nth-child(2) {
         height: 0;
         transition: ease-in 0.5s;
-      }
-      :nth-child(2) {
-        background-color: $navy-light;
-        transition: ease-in 0.5s 0.5s;
       }
     }
     &_mask {

@@ -19,7 +19,12 @@ const WorkHeader = (props) => {
     setSize(true);
   };
   return (
-    <div ref={focusTo} className={expand ? 'expand' : 'work_project'}>
+    <div
+      ref={focusTo}
+      className={expand ? 'expand' : 'work_project'}
+      onClick={handleClick}
+      style={{ cursor: 'pointer' }}
+    >
       <div className="project_mask">
         <div className="project_cover">
           <div></div>
@@ -39,7 +44,7 @@ const WorkHeader = (props) => {
           <div className="box_right">
             <p>{description}</p>
 
-            <button className="btn btn_view" onClick={handleClick}>
+            <span className="btn btn_view">
               View Project{' '}
               <svg
                 width="24"
@@ -55,7 +60,7 @@ const WorkHeader = (props) => {
                   fill="white"
                 />
               </svg>
-            </button>
+            </span>
           </div>
         </div>
       </div>

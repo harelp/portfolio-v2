@@ -18,25 +18,18 @@
 
   &_view {
     display: block;
-    border: 1px solid $green;
+    border: none;
     background-color: transparent;
-    color: $green;
+    color: $slate-light;
     margin-top: 30px;
-    padding: 10px 20px;
-    border-radius: 2px;
     font-size: 16px;
 
     svg {
-      display: none;
-    }
+      display: inline;
+      margin-left: 5px;
 
-    @include sm {
-      border: none;
-      color: $white;
-      padding: 0;
-      svg {
-        display: inline;
-        margin-left: 5px;
+      path {
+        fill: $slate-light;
       }
     }
   }

@@ -2,18 +2,17 @@ import React, { useEffect, useState, useRef } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './sass/main.scss';
 
-import Loader from './components/Loader.js';
-import Nav from './components/navbar/Nav.js';
-import Layout from './components/start/Layout.js';
-import WorkLayout from './components/work/WorkLayout.js';
-import SmallLayout from './components/small/SmallLayout.js';
-import SkillsLayout from './components/skills/SkillsLayout.js';
-import ContactLayout from './components/contact/ContactLayout.js';
-import SideNav from './components/sideNav/SideNav.js';
-import { scrollToref } from './components/helper.js';
+import Nav from './components/navbar/Nav';
+import Layout from './components/start/Layout';
+import WorkLayout from './components/work/WorkLayout';
+import SmallLayout from './components/small/SmallLayout';
+import SkillsLayout from './components/skills/SkillsLayout';
+import ContactLayout from './components/contact/ContactLayout';
+import CaseLayout from './components/cases/CaseLayout';
+import SideNav from './components/sideNav/SideNav';
+import { scrollToref } from './components/helper';
 
 function App() {
-  const [isLoaded, setIsloaded] = useState(true);
   const [isScrolling, setIsScrolling] = useState(false);
   let prevScrollpos = window.pageYOffset;
 
@@ -24,19 +23,10 @@ function App() {
   const contract = useRef();
 
   useEffect(() => {
-    let subscribe = true;
-
-    if (subscribe === true && isLoaded === false) {
-      setTimeout(function () {
-        setIsloaded(true);
-      }, 2700);
-    }
     window.addEventListener('touchmove', () => {
       window.addEventListener('scroll', handleScroll);
     });
     window.addEventListener('scroll', handleScroll);
-
-    return () => (subscribe = false);
   });
 
   const handleScroll = () => {
@@ -48,8 +38,7 @@ function App() {
     //getDocHeight() && setIsScrolling(false);
   };
 
-  const loader = <Loader></Loader>;
-  const nav = <Nav isLoaded={isLoaded}></Nav>;
+  const nav = <Nav></Nav>;
   const sideNav = (
     <SideNav
       scrollToref={scrollToref}
@@ -59,6 +48,8 @@ function App() {
 
   const mainPage = (
     <div>
+      {!isScrolling && nav}
+      {!isScrolling && sideNav}
       <Layout scrollToref={scrollToref} scrollTo={{ work, start }}></Layout>
       <WorkLayout scrollTo={work}></WorkLayout>
       <SmallLayout scrollTo={experiments}></SmallLayout>
@@ -68,10 +59,6 @@ function App() {
   );
   return (
     <Router>
-      {!isLoaded && loader}
-      {!isScrolling && nav}
-      {!isScrolling && sideNav}
-
       <Switch>
         <Route
           exact
@@ -80,7 +67,13 @@ function App() {
             return mainPage;
           }}
         />
-        <Route exact path="/test" component={WorkLayout} />
+        <Route
+          exact
+          path="/cases/:name"
+          render={(routeProps) => (
+            <CaseLayout name={routeProps.match.params.name}></CaseLayout>
+          )}
+        />
       </Switch>
     </Router>
   );

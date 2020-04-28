@@ -2,13 +2,8 @@ import React from 'react';
 import Hamburger from './Hamburger';
 
 const Nav = (props) => {
-  //const isMobile = false;
-
   return (
-    <header
-      className="nav"
-      style={{ animationDelay: `${props.isLoaded ? 0 : '2.8s'}` }}
-    >
+    <header className="nav" style={{ animationDelay: '0.1s' }}>
       <div className="nav_logo">
         <svg
           id="logo"

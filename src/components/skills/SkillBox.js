@@ -3,10 +3,13 @@ const SkillBox = (props) => {
   const [num, setNum] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
+    let timer = setInterval(() => {
       if (num === props.icon.length - 1) setNum(0);
       else setNum(num + 1);
     }, 3000);
+    return () => {
+      clearInterval(timer);
+    };
   });
 
   return (
