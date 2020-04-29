@@ -29,7 +29,7 @@ const SideNav = (props) => {
       </div>
       <div className="sideNav_resume">
         <a
-          href="https://drive.google.com/file/d/164uTG4jaSmRDwKvLLkNVcgtjqMQIp10s/view"
+          href="https://harelp.xyz/harel_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
