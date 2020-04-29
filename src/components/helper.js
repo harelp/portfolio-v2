@@ -40,17 +40,14 @@ export const smallProjs = [
   },
 ];
 
-export const image = [];
 export const projects = [
   {
     name: 'Quizi',
     linkTo: 'quizi',
     skills: ['React.js,', 'Node.js,', 'Express,', 'mongoDb'],
     description:
-      'A quiz game app which lets you compete with others, create your own quizzes and share it with others.',
-    hasGit: true,
-    github: 'https://github.com/harelp/quizi',
-    website: 'https://quiziapp.herokuapp.com',
+      'A quiz game app develped with MERN Stack which lets you compete with others, create your own quizzes and share it with others.',
+
     color: '#3949ab',
   },
   {
@@ -59,9 +56,7 @@ export const projects = [
     skills: ['CSS,', 'CSS Grid,', 'JavaScript'],
     description:
       'A small and modern one page web design created for a small hosting company.',
-    hasGit: false,
-    github: '',
-    website: 'https://quiziapp.herokuapp.com',
+
     color: '#562fc9',
   },
   {
@@ -70,9 +65,7 @@ export const projects = [
     skills: ['CSS,', 'JavaScript,', 'Bootstrap'],
     description:
       'Portfolio for a soap opera actor designed with bootstrap and canvas theme library.',
-    hasGit: false,
-    github: '',
-    website: 'https://quiziapp.herokuapp.com',
+
     color: '#252525',
   },
   {
@@ -80,10 +73,8 @@ export const projects = [
     linkTo: 'hostinfuse',
     skills: ['CSS,', 'JavaScript,', 'Bootstrap'],
     description:
-      'Portfolio for a soap opera actor designed with bootstrap and canvas theme library.',
-    hasGit: false,
-    github: '',
-    website: 'https://quiziapp.herokuapp.com',
+      'A simple and modern website designed and developed with bootstrap and various js libraries.',
+
     color: '#4a90e2',
   },
   {
@@ -91,10 +82,8 @@ export const projects = [
     linkTo: 'quickboosters',
     skills: ['CSS,', 'JavaScript,', 'Bootstrap'],
     description:
-      'Portfolio for a soap opera actor designed with bootstrap and canvas theme library.',
-    hasGit: false,
-    github: '',
-    website: 'https://quiziapp.herokuapp.com',
+      'Three pages modern website developed with Html, CSS Grid, Particles.js and JavaScript from scratch.',
+
     color: '#ef7752',
   },
 ];
