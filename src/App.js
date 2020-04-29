@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ReactGa from 'react-ga';
 import './sass/main.scss';
 
 import Nav from './components/navbar/Nav';
@@ -23,6 +24,9 @@ function App() {
   const contract = useRef();
 
   useEffect(() => {
+    ReactGa.initialize('UA-98414410-4');
+    ReactGa.pageview(window.location.pathname + window.location.search);
+
     window.addEventListener('touchmove', () => {
       window.addEventListener('scroll', handleScroll);
     });
