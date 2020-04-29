@@ -41,7 +41,7 @@ export const casesArr = [
   },
   {
     name: 'hosty',
-    website: '',
+    website: 'https://harelp.xyz/projects/hosty/',
     images: [host1, host2, host3, host4],
   },
   {
@@ -51,12 +51,12 @@ export const casesArr = [
   },
   {
     name: 'hostinfuse',
-    website: '',
+    website: 'https://hostinfuse.com',
     images: [infuse1, infuse2, infuse3, infuse4, infuse5, infuse6],
   },
   {
     name: 'quickboosters',
-    website: '',
+    website: 'https://harelp.xyz/projects/quickBoosters/',
     images: [quick1, quick2, quick3, quick4, quick5, quick6, quick7],
   },
 ];

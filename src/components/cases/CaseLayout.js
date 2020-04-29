@@ -9,7 +9,7 @@ const CaseLayout = (props) => {
   });
   return (
     <div className="casses_container">
-      <div className="casses_nav wrapper">
+      <div className="casses_nav">
         <Link to="/" className="btn btn_action">
           <svg
             width="24"

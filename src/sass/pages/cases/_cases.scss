@@ -5,16 +5,23 @@
   }
 
   &_nav {
+    background-color: $navy;
     width: 100%;
-    padding-top: 25px;
-    padding-bottom: 45px;
-    @include flexbox(row, center, space-between);
+    position: fixed;
+    bottom: 0;
+    padding: 25px 150px;
 
+    @include flexbox(row, center, space-between);
     a {
       margin: 0;
+
       svg {
         transform: rotate(180deg);
       }
+    }
+
+    @include sm {
+      padding: 10px 25px;
     }
   }
 

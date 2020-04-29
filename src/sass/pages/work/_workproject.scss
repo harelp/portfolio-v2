@@ -27,10 +27,6 @@
         transition: ease-in 0.5s;
       }
     }
-    &_mask {
-      transform: matrix(1.5, 0, 0, 1.5, 0, 0);
-      animation: zoom-in 1s linear;
-    }
   }
 }
 

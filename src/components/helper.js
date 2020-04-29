@@ -6,20 +6,20 @@ export const smallProjs = [
     website: 'https://harelp.xyz/',
   },
   {
-    name: 'Todo App',
-    website: 'hello',
+    name: 'Lisity - Todo App',
+    website: 'https://harelp.xyz/projects/listify/',
   },
   {
     name: 'MLB Database',
-    website: 'hello',
+    website: 'https://harelp.xyz/projects/mlbdb/',
   },
   {
     name: 'Simple eStore',
-    website: 'hello',
+    website: 'https://harelp.xyz/projects/estore/',
   },
   {
     name: 'Excel Spreadsheet',
-    website: 'hello',
+    website: 'https://harelp.xyz/projects/spreadsheet/',
   },
   {
     name: 'ABL Logo',
@@ -77,7 +77,7 @@ export const projects = [
   },
   {
     name: 'HostInfuse',
-    linkTo: 'hostInfuse',
+    linkTo: 'hostinfuse',
     skills: ['CSS,', 'JavaScript,', 'Bootstrap'],
     description:
       'Portfolio for a soap opera actor designed with bootstrap and canvas theme library.',
